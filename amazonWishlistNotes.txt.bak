@@ -1,0 +1,20 @@
+Things needed to start:
+Wishlist URL |OR| Load wishlist html from file
+
+Storing information:
+file format: .csv
+
+format=itemID,href,name,startRecordDate,endRecordDate,startPrice,startReviewCount,priceUpdates=[[newPrice,currentDate]],reviewCountUpdates=[[newReviewCount,currentDate]]
+
+# Features needed:
+
+New name detection:
+If the itemID matches but the names are different, the user will be prompted.
+
+
+Deletion detection:
+If the list of itemID's no longer has the item recorded, the user will be prompted.
+
+
+New item detection:
+If an itemID was recorded without being recorded before, the user will be prompted.

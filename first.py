@@ -49,8 +49,6 @@ del itemList[-1]
 
 items_in_list = len(itemList)
 
-print(items_in_list)
-
 
 for item in itemList:
     price = float(item['data-price'])
@@ -70,6 +68,7 @@ for item in itemList:
             pass
 ##            print(i,"nah",e)
 ##        print(x,'\n'+'*****************'+'\n')
+    
     print(name)
     print(price)
     print(reviewCount)    
