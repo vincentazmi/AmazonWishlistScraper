@@ -2,18 +2,20 @@ from bs4 import BeautifulSoup as bs
 import requests, sys, time
 from requests_html import HTMLSession
 
-url = input("Paste wishlist url or empty for default\n")
-if url == "":
-    url = 'https://www.amazon.co.uk/hz/wishlist/ls/TI11QZ0K8UER?ref_=wl_share'
+loadFromFile = input("Load from file?(y/n")
+if loadFromFile.lower() == "y":
+    loadFromFile = True
+    outputFile = input("Enter filename or empty for default (output1.html):")
+    if outputFile == "":
+        outputFile = 'output1.html'
 
-
-outputFile = 'output1.html'
-loadSoup = True
-
-if loadSoup:
     with open(outputFile, 'rb') as f:
         soup = bs(f.read(), 'lxml')
+    
 else:
+    url = input("Paste wishlist url or empty for default\n")
+    if url == "":
+        url = 'https://www.amazon.co.uk/hz/wishlist/ls/TI11QZ0K8UER'
 
     session = HTMLSession()
 
@@ -26,7 +28,7 @@ else:
 
 
     soup = bs(page.text, 'html.parser')
-        
+           
 
 
 'classList is the area the table of items is located'
